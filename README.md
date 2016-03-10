@@ -13,3 +13,5 @@ Zie presentaties in de map opdracht 1.1
 - Als javascript uitgeschakeld is, is de app niet bruikbaar
 
 Er is nu zonder muis te navigeren door de app en kan worden gebruikt worden met een screen reader.
+
+http://raymondkorrel.github.io/bt/opdracht1-2
