@@ -59,8 +59,17 @@ button {
 
 #navigation .icon {
 	width: 30px;
-	position: absolute;
-	top: 30px;
+	margin-top: 10px;
+}
+
+a[href="#settings"] img {
+	margin-right: 15px;
+    float: right;
+}
+
+a[href="#list"] img {
+	margin-left: 15px;
+    float: left;
 }
 
 .list {
@@ -224,7 +233,7 @@ button {
 	position: relative;
 }
 
-#list li > img {
+#list li .cross {
 	width: 15px;
 	position: absolute;
 	right: 10px;

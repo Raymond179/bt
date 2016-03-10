@@ -52,7 +52,7 @@ var list = (function() {
 		// Object to let Transparency know what values to give which element
 		var directives = {
 			list_detail: {href: href},
-			list_img: {src: photo},
+			list_img: {src: photo, alt: price},
 			list_street: {text: street},
 			list_city: {text: city},
 			list_price: {text: price}

@@ -158,6 +158,7 @@ var overview = (function() {
 			});
 	};
 	var render = function(arr) {
+		console.log(arr)
 		// Declare all functions to get data from object
 		var photo = function() {return this.FotoLarge};
 		var street = function() {return this.Adres};
@@ -168,7 +169,7 @@ var overview = (function() {
 		// Object to let Transparency know what values to give which element
 		var directives = {
 			house_detail: {href: href},
-			house_img: {src: photo},
+			house_img: {src: photo, alt: street},
 			house_street: {text: street},
 			house_city: {text: city},
 			house_price: {text: price}
