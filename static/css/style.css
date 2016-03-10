@@ -1,0 +1,380 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,700);
+
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	margin:0;
+	padding:0;
+	font-family: 'Roboto';
+	font-weight: normal;
+	background-color: #2B2B25;
+	color:white;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+	margin: 0;
+}
+
+button {
+	background: #6EC7E4;
+    border: none;
+    padding: 10px;
+    color: white;
+}
+
+/* NAVIGATION */
+#navigation {
+	width: 100%;
+	height: 70px;
+	background: #F6AF1A;
+	padding-top: 20px;
+
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+#navigation div {
+	text-align: center;
+
+	-webkit-box-flex: 33%;      /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: 33%;         /* OLD - Firefox 19- */
+	width: 33%;               /* For old syntax, otherwise collapses. */
+	-webkit-flex: 33%;          /* Chrome */
+	-ms-flex: 33%;              /* IE 10 */
+	flex: 33%;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+#navigation img {
+	width: 100px;
+	text-align: center;
+}
+
+#navigation .icon {
+	width: 30px;
+	position: absolute;
+	top: 30px;
+}
+
+.list {
+	left: 10px;
+}
+
+.settings {
+	right: 10px;
+}
+
+/* HOUSE */
+.house {
+	position: absolute;
+    width: 100%;
+    top: 70px;
+    z-index: 1;
+    
+}
+
+.house:first-child {
+    z-index: 2;
+    position: relative;
+    top:0;
+}
+
+#house-container {
+	width: 100%;
+	height: 100%;
+}
+
+.house_img {
+	width: 100%;
+	display: block;
+}
+
+.house_info {
+	width: 100%;
+	height: 50px;
+	background: #F6AF1A;
+	font-size: 0.8em;
+}
+
+.house_location {
+	float: left;
+	margin-left: 15px;
+    margin-top: 7px;
+}
+
+.house_location span {
+	display: block;
+}
+
+.house_city {
+	font-weight: bold;
+}
+
+.house_price {
+	float: right;
+	margin-right: 15px;
+	margin-top: 14px;
+	color: black;
+}
+
+/* BUTTONS */
+#circle-container {
+	width: 100%;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+	justify-content: center;
+	-webkit-justify-content: center;
+	margin-top: 20px;
+}
+
+.circle {
+	width: 70px;
+	height: 70px;
+	background: #6EC7E4;
+	margin: 20px;
+	border-radius: 50%;
+	border: 3px solid #F6AF1A;
+	cursor: pointer;
+
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.circle img {
+	width: 30px;
+	margin: auto;
+}
+
+/* LIST */
+.list_img_container {
+	float: left;
+    position: relative;
+    width: 35%;
+}
+
+.list_img {
+	width: 100%;
+	height: 100%;
+	max-width: 170px;
+    display: block;
+}
+
+.list_price_container {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 170px;
+}
+
+.list_price {
+	font-size: 0.7em;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: block;
+    text-align: center;
+}
+
+.list_info {
+	float: left;
+    width: 65%;
+	padding: 15px 0px 15px 15px;
+}
+
+.list_street {
+	display: block;
+}
+
+.list_city {
+	font-weight: bold;
+	display: block;
+}
+
+#list {
+	padding: 0;
+	margin: 0;
+}
+
+#list a {
+	color: white;
+	display: block;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#list li {
+	list-style-type: none;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+#list li > img {
+	width: 15px;
+	position: absolute;
+	right: 10px;
+    top: 38%;
+}
+
+/* DETAIL */
+.house_labels span {
+	display: block;
+	padding: 10px;
+	background: #6EC7E4;
+	color: black;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-bottom: 5px;
+}
+
+.house_full_info {
+    margin: 15px;
+}
+
+.house_full_info label {
+    margin-top: 10px;
+    font-weight: bold;
+    display: block;
+}
+
+.house_full_info p{
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+/* LOADING */
+.loading {
+	width: 50px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+/* SETTINGS */
+#settings:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+#settings {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.close {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+
+#settings-content {
+	width: 90%;
+	height: 80%;
+	background: #F6AF1A;
+	position: fixed;
+	top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+#settings-content h1 {
+	text-align: center;
+}
+
+#settings-content img {
+	position: absolute;
+    top: 17px;
+    right: 15px;
+    width: 25px;
+}
+
+#settings-content form {
+	position: relative;
+}
+
+#settings-content form label {
+	display: block;
+	margin: 20px 0;
+}
+
+#settings-content form span {
+	display: block;
+}
+
+#settings-content form input {
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+}
+
+/* AUTOSUGGEST */
+#autosuggest {
+	position: absolute;
+	background: white;
+    color: black;
+    width: 100%;
+}
+
+#autosuggest span {
+	padding: 10px;
+    font-size: 0.8em;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+/* JAVASCRIPT CLASSES */
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+.moveLeft {
+	transition: transform 0.5s;
+	-webkit-transition: -webkit-transform 0.5s;
+
+	transform: translateX(-100%) rotate(-90deg);
+	-webkit-transform: translateX(-100%) rotate(-90deg);
+}
+
+.moveRight{
+	transition: transform 0.5s;
+	-webkit-transition: -webkit-transform 0.5s;
+
+	transform: translateX(100%) rotate(90deg);
+	-webkit-transform: translateX(100%) rotate(90deg);
+}
