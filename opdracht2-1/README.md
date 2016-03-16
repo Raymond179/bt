@@ -20,6 +20,9 @@ With the source tag you can load multiple audio files. If the first one is not s
 	<a href="snap.mp3">Download mp3</a>
 </audio>
 ```
+
+http://raymondkorrel.github.io/bt/opdracht2-1/html-audio/
+
 #### Picture
 The picture tag let's you load multiple images on different screen widths. 
 
@@ -36,6 +39,8 @@ Inside the picture tag you can set source tags where you specify wich image shou
     <img src="img-medium.jpg" alt="img">
 </picture>
 ```
+
+http://raymondkorrel.github.io/bt/opdracht2-1/html-picture/
 
 ## CSS
 
@@ -71,6 +76,8 @@ When flex is 'enabled', properties like float and display inline block don't wor
 }
 ```
 
+http://raymondkorrel.github.io/bt/opdracht2-1/css-flex/
+
 #### Filter
 The filter property let's you put filters over images.
 
@@ -88,6 +95,8 @@ img {
 }
 ```
 source: http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html
+
+http://raymondkorrel.github.io/bt/opdracht2-1/css-filter/
 
 ## ES6
 
@@ -110,6 +119,8 @@ function promiseCheck() {
 }
 ```
 
+http://raymondkorrel.github.io/bt/opdracht2-1/es-promises/
+
 #### Arrow functions
 Arrow functions are a new way to write functions in ES6
 
@@ -128,3 +139,5 @@ function arrowCheck() {
     return true;
 }
 ```
+
+http://raymondkorrel.github.io/bt/opdracht2-1/es-functions/
