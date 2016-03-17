@@ -12,17 +12,17 @@ var states = (function() {
 
 		// Hammer
 		// Make new hammer
-		var mc = new Hammer(el.houses);
+		// var mc = new Hammer(el.houses);
 
-		// When swipe left, fire nextItem
-		mc.on("swipeleft", function(ev) {
-			overview.nextItem('moveLeft');
-		});
+		// // When swipe left, fire nextItem
+		// mc.on("swipeleft", function(ev) {
+		// 	overview.nextItem('moveLeft');
+		// });
 
-		// When swipe right, fire nextItem
-		mc.on("swiperight", function(ev) {
-			overview.nextItem('moveRight');
-		});
+		// // When swipe right, fire nextItem
+		// mc.on("swiperight", function(ev) {
+		// 	overview.nextItem('moveRight');
+		// });
 
 	};
 	var loading = function(state, elem) {

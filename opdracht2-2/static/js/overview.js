@@ -10,8 +10,27 @@ var overview = (function() {
 	var events = function() {
 		// Make click events for every circle (yes and no)
 		for (var i = 0; i < el.circles.length; i++) {
-			el.circles[i].addEventListener("click", nextItem);
+			if (el.circles[i].addEventListener) {
+			    el.circles[i].addEventListener("click", nextItem);
+			}
+			else {
+				el.circles[i].attachEvent("onclick", nextItem);
+			}
 		};
+
+		// Hammer
+		// Make new hammer
+		var mc = new Hammer(el.houses);
+
+		// When swipe left, fire nextItem
+		mc.on("swipeleft", function(ev) {
+			nextItem('moveLeft');
+		});
+
+		// When swipe right, fire nextItem
+		mc.on("swiperight", function(ev) {
+			nextItem('moveRight');
+		});
 	}
 	var settings = function(settings) {
 		// Loop through the form and create a settings object with the input values
@@ -41,11 +60,7 @@ var overview = (function() {
 				var state = 'moveRight';
 			};
 		};
-		// If the state is moveLeft
-		if (state == 'moveLeft') {
-			// Add the object of the clicked item to the list
-			var object = searchResults.Objects[clickNumber];
-		};
+
 		// Add 1 to the clickNumber and run the moveAway function with the right direction
 		clickNumber++;
 		var direction = state;
@@ -56,13 +71,17 @@ var overview = (function() {
 		var renderArray = [];
 		var nextNumber = clickNumber + 1;
 		renderArray.push(searchResults.Objects[clickNumber],searchResults.Objects[nextNumber]);
-		// Add the class of the direction to the first house element
-		el.firstHouse.classList.add(direction);
+
+		el.firstHouse.className += " "+direction;
 		// Wait untill the animation is finished and then remove the class and render the array
 		setTimeout(function(){
-			el.firstHouse.classList.remove(direction);
+			var classes = el.firstHouse.className;
+			var newClasses = classes.replace(direction, '');
+			el.firstHouse.className = newClasses;
+
 			render(renderArray);
 		}, 500);
+
 	};
 	var apiCall = function(settings, callback) {
 		var xhr = new XMLHttpRequest();
@@ -96,23 +115,6 @@ var overview = (function() {
 		};
 	};
 	var pushToArray = function(settings) {
-		// Fire apiCall with the settings object
-		// apiCall(settings)
-		// 	.then(function (object) {
-		// 		// When the data is succesfully received, object = searchResults. Then render and display the next items
-		// 		searchResults = object;
-
-		// 		var renderArray = [];
-		// 		var nextNumber = clickNumber + 1;
-		// 		renderArray.push(searchResults.Objects[clickNumber],searchResults.Objects[nextNumber]);
-
-		// 		render(renderArray);
-		// 	})
-		// 	.catch(function() {
-		// 		// If an error occurred, alert there is something wrong
-		// 		alert('Something went wrong');
-		// 	});
-
 		var callback = function(object) {
 			// When the data is succesfully received, object = searchResults. Then render and display the next items
 			searchResults = object;
@@ -123,7 +125,7 @@ var overview = (function() {
 
 			render(renderArray);
 		};
-
+		// Fire apiCall with the settings object
 		apiCall(settings, callback);
 	};
 	var render = function(arr) {

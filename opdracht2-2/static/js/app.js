@@ -2,7 +2,6 @@
 var app = (function() {
 	var init = function() {
 		el.init();
-		states.init();
 		overview.init();
 	};
 
