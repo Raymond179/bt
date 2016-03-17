@@ -48,7 +48,7 @@ De animatie is een CSS transform die veel browsers niet ondersteunen. Maar dat m
 ###### 2. Progressive enhancement: Swipen
 Voor de swipe events gebruik ik Hammer js die de volgende browsers ondersteund.
 
-![alt tag](https://github.com/RaymondKorrel/bt/opdracht2-2/static/img/hammberbs.jpg)
+![alt tag](https://github.com/RaymondKorrel/bt/blob/master/opdracht2-2/static/img/hammerbs.jpg)
 
 Maak twee swipe events aan:
 ```javascript
