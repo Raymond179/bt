@@ -366,15 +366,19 @@ button {
 .moveLeft {
 	transition: transform 0.5s;
 	-webkit-transition: -webkit-transform 0.5s;
+	-moz-transition: -moz-transform 0.5s;
 
 	transform: translateX(-100%) rotate(-90deg);
 	-webkit-transform: translateX(-100%) rotate(-90deg);
+	-moz-transform: translateX(-100%) rotate(-90deg);
 }
 
 .moveRight{
 	transition: transform 0.5s;
 	-webkit-transition: -webkit-transform 0.5s;
+	-moz-transition: -moz-transform 0.5s;
 
 	transform: translateX(100%) rotate(90deg);
 	-webkit-transform: translateX(100%) rotate(90deg);
+	-moz-transform: translateX(100%) rotate(90deg);
 }
