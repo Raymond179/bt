@@ -72,19 +72,19 @@
 				// PHONE
 				var p = document.createElement('p')
 				var img2 = document.createElement('img')
-				img2.src = 'static/img/phone.png';
+				img2.src = 'static/img/phone.jpg';
 				img2.alt = 'Phone icon';
 				var number = document.createTextNode(phone);
 				// EMAIL
 				var p2 = document.createElement('p')
 				var img3 = document.createElement('img')
-				img3.src = 'static/img/email.png';
+				img3.src = 'static/img/email.jpg';
 				img3.alt = 'Email icon'
 				var email = document.createTextNode(email);
 				// ADRESS
 				var p3 = document.createElement('p')
 				var img4 = document.createElement('img')
-				img4.src = 'static/img/adress.png';
+				img4.src = 'static/img/adress.jpg';
 				img4.alt = 'Adress icon';
 				var adres = document.createTextNode(adres);
 				// Append
