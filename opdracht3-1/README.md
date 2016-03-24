@@ -1,5 +1,8 @@
 # Opdracht 3.1 - Contact lijst
 
+Bekijk hem op:
+http://raymondkorrel.github.io/bt/opdracht3-1/
+
 ### Use case
 Ik wil in een lijst contacten kunnen zoeken, en details kunnen bekijken.
 
