@@ -172,3 +172,8 @@ De listitems moeten nu nog worden gecategoriseerd op de eerste letter. Voor elke
 ```
 
 De web-app werkt nu in alle browsers!
+
+## Aanpassingen sinds mondeling
+
+###### Zonder javascript
+Voor de aanpassing renderde ik de JSON data met javascript in. Hierdoor gaf hij een lege pagina als javascript uit stond. Daarom heb ik de HTML niet meer via javascript ingeladen maar er standaard ingezet. Nu laadt hij alle contacten opengeklapt in.
