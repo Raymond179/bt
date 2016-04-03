@@ -5,7 +5,21 @@
 	// The application object
 	var app = (function() {
 		var init = function() {
-			drawer.init();
+			checkSupport.init();
+		}
+		// Return public functions
+		return {
+			init: init
+		}
+	}());
+
+	var checkSupport = (function() {
+		var init = function() {
+			if (document.getElementsByTagName) {
+				drawer.init();
+			} else {
+				alert("Your browser doesn't support this website")
+			}
 		}
 		// Return public functions
 		return {
@@ -23,9 +37,10 @@
 
 			for (var i = 0; i < listItems.length; i++) {
 				if (listItems[i].className.indexOf('contact') != -1) {
-					listItems[i].getElementsByTagName('div')[1].className += ' hide';
-					listItems[i].onclick = function() {
-						var child = this.getElementsByTagName('div')[1];
+					var button = listItems[i].getElementsByTagName('button')[0];
+					listItems[i].getElementsByTagName('div')[0].className += ' hide';
+					button.onclick = function() {
+						var child = this.parentElement.getElementsByTagName('div')[0];
 						drawer(child)
 					}
 				}

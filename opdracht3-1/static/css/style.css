@@ -57,6 +57,10 @@ h2 {
 	position: -ms-sticky;
 	position: -o-sticky;
 	top: 32px;
+	padding: 0;
+    border: 0;
+    display: block;
+    text-align: left;
 }
 
 .contact:nth-of-type(even) .contact-title {
