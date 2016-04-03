@@ -12,6 +12,11 @@ ul {
 	list-style: none;
 }
 
+h1 {
+	color: #2B393C;
+	text-align: center;
+}
+
 h2 {
 	margin: 0;
 }
@@ -29,6 +34,11 @@ h2 {
 	position: -o-sticky;
 	top: 0px;
 	z-index: 10;
+}
+
+.letter h2 {
+	font-size: 1em;
+	font-weight: normal;
 }
 
 .contact {
