@@ -27,11 +27,11 @@ h2 {
     background: #2B393C;
     color: white;
 
-    position: sticky;
 	position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
 	position: -o-sticky;
+	position: sticky;
 	top: 0px;
 	z-index: 10;
 }
